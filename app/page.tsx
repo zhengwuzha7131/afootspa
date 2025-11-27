@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
   return (
@@ -342,7 +343,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section - Masonry Style */}
+      {/* Gallery Section - Interactive Gallery */}
       <section id="gallery" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -356,62 +357,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="col-span-2 row-span-2">
-              <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden group">
-                <Image
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800"
-                  alt="Gallery 1"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="relative h-48 rounded-2xl overflow-hidden group">
-                <Image
-                  src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800"
-                  alt="Gallery 2"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="relative h-48 rounded-2xl overflow-hidden group">
-                <Image
-                  src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800"
-                  alt="Gallery 3"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="relative h-48 rounded-2xl overflow-hidden group">
-                <Image
-                  src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800"
-                  alt="Gallery 4"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="relative h-48 rounded-2xl overflow-hidden group">
-                <Image
-                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800"
-                  alt="Gallery 5"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-          </div>
-
-          <p className="text-center text-gray-500 mt-8 italic text-sm">
-            *Placeholder images - Replace with your own photos for the best results
-          </p>
+          <Gallery />
         </div>
       </section>
 
@@ -432,16 +378,15 @@ export default function Home() {
                 <div className="flex text-green-500 text-xl">★★★★★</div>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed italic">
-                "Absolutely phenomenal experience! The therapist was incredibly skilled and attentive to my needs. 
-                I left feeling completely rejuvenated. This is now my go-to spot for self-care."
+                "I came in with intense back pain that was making me nauseous, and I left feeling so much better. The massage therapist was attentive and worked through the tension without causing more discomfort. The staff was really kind and made me feel comfortable throughout the whole experience. It wasn't a miracle fix, but it gave me real relief, and I'll definitely come back when I need it again."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  S
+                  L
                 </div>
                 <div className="ml-4">
-                  <div className="font-bold text-slate-900">Sarah Martinez</div>
-                  <div className="text-gray-500 text-sm">Regular Client</div>
+                  <div className="font-bold text-slate-900">LT</div>
+                  <div className="text-gray-500 text-sm">Local Guide</div>
                 </div>
               </div>
             </div>
@@ -451,35 +396,33 @@ export default function Home() {
                 <div className="flex text-green-500 text-xl">★★★★★</div>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed italic">
-                "The hot stone massage was pure bliss! The atmosphere is so calming, and the staff really knows 
-                what they're doing. I've been to many spas, and this is hands down one of the best."
+                "Great massage! Clean place and good deals! My massage was for 70 minutes plus stones. Definitely will be back."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  U
+                </div>
+                <div className="ml-4">
+                  <div className="font-bold text-slate-900">Ugne H.</div>
+                  <div className="text-gray-500 text-sm">Local Guide</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-500">
+              <div className="flex items-center mb-4">
+                <div className="flex text-green-500 text-xl">★★★★★</div>
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed italic">
+                "This massage shop is great! The atmosphere is comfortable, and the staff is very friendly. The massage therapist was professional and helped me relax, especially my shoulders and neck. The prices are reasonable, and I'll definitely come back again!"
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
                   M
                 </div>
                 <div className="ml-4">
-                  <div className="font-bold text-slate-900">Michael Thompson</div>
-                  <div className="text-gray-500 text-sm">First-time Visitor</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-500">
-              <div className="flex items-center mb-4">
-                <div className="flex text-green-500 text-xl">★★★★★</div>
-              </div>
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
-                "My partner and I had the couples massage and it was wonderful! They accommodated our schedules 
-                perfectly and made us feel so comfortable. Definitely booking again soon!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  E
-                </div>
-                <div className="ml-4">
-                  <div className="font-bold text-slate-900">Emily Chen</div>
-                  <div className="text-gray-500 text-sm">Couples Treatment</div>
+                  <div className="font-bold text-slate-900">Ming</div>
+                  <div className="text-gray-500 text-sm">Verified Customer</div>
                 </div>
               </div>
             </div>
