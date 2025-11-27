@@ -35,19 +35,16 @@ export default function BookingPage() {
               Schedule Your Session
             </h2>
             
-            {/* Square Appointments Embed */}
-            <div className="min-h-[600px] bg-slate-50 rounded-2xl p-6 flex items-center justify-center">
-              <div id="square-appointments-container" className="w-full">
-                <script 
-                  src='https://square.site/appointments/buyer/widget/zn0txdr6dkh5j8/LH4BBRGRCK6DJ.js'
-                  dangerouslySetInnerHTML={{ __html: '' }}
-                />
-                <div className="text-center text-gray-500">
-                  <div className="text-6xl mb-4">📅</div>
-                  <p className="text-lg mb-2">Booking Widget Loading...</p>
-                  <p className="text-sm">The Square booking widget will appear here</p>
-                </div>
-              </div>
+            {/* Square Appointments Iframe */}
+            <div className="w-full min-h-[800px] bg-slate-50 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://square.site/appointments/buyer/widget/zn0txdr6dkh5j8/LH4BBRGRCK6DJ"
+                width="100%"
+                height="800"
+                frameBorder="0"
+                title="Book an Appointment"
+                className="w-full"
+              ></iframe>
             </div>
           </div>
 
